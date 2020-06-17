@@ -20,7 +20,7 @@ class Register extends Component {
             color: '',
             zip: '',
             radioPet: '',
-            coffeeCheckbox: false
+            coffeeCheckbox: false,
         };
         this.baseState = this.state;
     }
@@ -56,12 +56,6 @@ class Register extends Component {
         this.resetToTop();
     }
 
-    onSubmitHandler = (event) => {
-        event.preventDefault();
-        this.setState(this.baseState);
-        this.resetToTop();
-    }
-
     render() {
 
         return (
@@ -80,6 +74,7 @@ class Register extends Component {
                             value={this.state.firstLastName}
                             onChange={this.onChangeHandler}
                             maxLength={50}
+                            required
                         />
                     </Form.Group>
 
@@ -87,12 +82,14 @@ class Register extends Component {
                         <Form.Group as={Col} controlId="formPhoneNumber">
                             <Form.Label>Phone Number</Form.Label>
                             <Form.Control
-                                type="text"
+                                type="tel"
+                                pattern="[0-9]{10}"
+                                maxLength={10}
                                 placeholder="Phone Number"
                                 name="phoneNumber"
                                 value={this.state.phoneNumber}
                                 onChange={this.onChangeHandler}
-                                maxLength={10}
+                                required
                             />
                         </Form.Group>
 
@@ -105,6 +102,7 @@ class Register extends Component {
                                 value={this.state.email}
                                 onChange={this.onChangeHandler}
                                 maxLength={50}
+                                required
                             />
                         </Form.Group>
                     </Form.Row>
@@ -117,10 +115,11 @@ class Register extends Component {
                             value={this.state.address1}
                             onChange={this.onChangeHandler}
                             maxLength={50}
+                            required
                         />
                     </Form.Group>
 
-                    <Form.Group controlId="formAddress1">
+                    <Form.Group controlId="formAddress2">
                         <Form.Label>Address 2</Form.Label>
                         <Form.Control
                             placeholder="Address 2"
@@ -140,6 +139,7 @@ class Register extends Component {
                                 name="city"
                                 value={this.state.city}
                                 onChange={this.onChangeHandler}
+                                required
                             />
                         </Form.Group>
 
@@ -149,6 +149,7 @@ class Register extends Component {
                                 as="select"
                                 value={this.state.ausState}
                                 onChange={this.onSelectionHandler}
+                                required
                             >
                                 <option value="NSW">NSW</option>
                                 <option value="QLD">QLD</option>
@@ -162,11 +163,14 @@ class Register extends Component {
                         <Form.Group as={Col} controlId="formZip">
                             <Form.Label>Zip</Form.Label>
                             <Form.Control
-                                type="text"
+                                type="tel"
+                                pattern="[0-9]{4}"
+                                maxLength={4}
                                 placeholder="Zip"
                                 name="zip"
                                 value={this.state.zip}
                                 onChange={this.onChangeHandler}
+                                required
                             />
                         </Form.Group>
                     </Form.Row>
@@ -180,7 +184,6 @@ class Register extends Component {
                                 type="radio"
                                 checked={this.state.radioPet === 1 ? true : false}
                                 onChange={this.onRadioHandler(1)}
-
                             />
                             <Form.Check
                                 inline
