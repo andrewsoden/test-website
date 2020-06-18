@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import Footer from './Footer';
 import Home from './Home';
-import Users from './Users';
+import { Login } from './Login';
 import Register from './Register';
 import Header from './Header';
 
@@ -20,7 +20,7 @@ class App extends Component {
         <BrowserRouter>
           <Route exact path='/' component={Home} />
           <Route path='/register' component={Register} />
-          <Route path='/users' component={Users} />
+          <Route path='/login' component={Login} />
         </BrowserRouter>
 
         <Footer id="footer" />
