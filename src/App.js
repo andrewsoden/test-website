@@ -17,7 +17,7 @@ class App extends Component {
       <div>
         <Header />
 
-        <BrowserRouter>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
           <Route exact path='/' component={Home} />
           <Route path='/register' component={Register} />
           <Route path='/users' component={Users} />
