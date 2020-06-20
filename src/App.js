@@ -15,12 +15,12 @@ class App extends Component {
 
     return (
       <div>
-        <Header />
+        <BrowserRouter basename="/">
+          <Header />
 
-        <BrowserRouter basename="/test-website">
-          <Route exact path='/' component={Home} />
-          <Route path='/register' component={Register} />
-          <Route path='/users' component={Users} />
+          <Route exact path="/test-website" component={Home} />
+          <Route path="/test-website/register" component={Register} />
+          <Route path="/test-website/users" component={Users} />
         </BrowserRouter>
 
         <Footer id="footer" />
