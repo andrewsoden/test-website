@@ -6,7 +6,7 @@ import Users from './Users';
 import Register from './Register';
 import Header from './Header';
 
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { HashRouter, Route } from 'react-router-dom';
 
 import './App.css';
 
@@ -15,13 +15,13 @@ class App extends Component {
 
     return (
       <div>
-        <Router basename="/">
+        <HashRouter>
           <Header />
 
-          <Route exact path="/test-website" component={Home} />
-          <Route path="/test-website/register" component={Register} />
-          <Route path="/test-website/users" component={Users} />
-        </Router>
+          <Route exact path="/" component={Home} />
+          <Route path="/register" component={Register} />
+          <Route path="/users" component={Users} />
+        </HashRouter>
 
         <Footer id="footer" />
       </div>
