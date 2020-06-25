@@ -2,15 +2,15 @@ import React, { Component } from 'react';
 
 import Container from 'react-bootstrap/Container';
 
-class Home extends Component {
+class Users extends Component {
     render() {
 
         return (
             <Container>
-                <h2>Home39</h2>
+                <h2>Users</h2>
             </Container>
         );
     }
 }
 
-export default Home;
+export default Users;

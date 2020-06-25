@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { userService } from '../_services';
+import { userService } from './_services';
 
 class Login extends React.Component {
     constructor(props) {
@@ -86,4 +86,4 @@ class Login extends React.Component {
     }
 }
 
-export { Login };
+export default Login;

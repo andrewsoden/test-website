@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 
 import Footer from './Footer';
 import Home from './Home';
-import { Login } from './Login';
+import Login from './Login';
 import Register from './Register';
 import Header from './Header';
 
-import { BrowserRouter, Route } from 'react-router-dom';
+import { HashRouter, Route } from 'react-router-dom';
 
 import './App.css';
 
@@ -15,13 +15,13 @@ class App extends Component {
 
     return (
       <div>
-        <Header />
+        <HashRouter>
+          <Header />
 
-        <BrowserRouter>
-          <Route exact path='/' component={Home} />
-          <Route path='/register' component={Register} />
-          <Route path='/login' component={Login} />
-        </BrowserRouter>
+          <Route exact path="/" component={Home} />
+          <Route path="/register" component={Register} />
+          <Route path="/login" component={Login} />
+        </HashRouter>
 
         <Footer id="footer" />
       </div>
