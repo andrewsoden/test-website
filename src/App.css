@@ -5,3 +5,17 @@
 .center-col {
   background: #aaa;
 }
+
+.resultIsPalindrome {
+  background: green;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+.resultNotPalindrome {
+  background: red;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
