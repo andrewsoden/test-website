@@ -51,9 +51,11 @@ class Register extends Component {
         this.setState({ ausState: event.target.value });
     }
 
-    onResetHandler = (event) => {
+    onSubmitHandler = (event) => {
+        alert('Form submitted - have a great day');
         this.setState(this.baseState);
         this.resetToTop();
+        event.preventDefault();
     }
 
     render() {

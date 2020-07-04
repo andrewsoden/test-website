@@ -3,5 +3,19 @@
 }
 
 .center-col {
-  background: #aaa;
+  background: lightblue;
+}
+
+.resultIsPalindrome {
+  background: green;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+.resultNotPalindrome {
+  background: red;
+  color: white;
+  font-weight: bold;
+  text-align: center;
 }
