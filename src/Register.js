@@ -186,6 +186,7 @@ class Register extends Component {
                                 type="radio"
                                 checked={this.state.radioPet === 1 ? true : false}
                                 onChange={this.onRadioHandler(1)}
+                                id="inputCatPerson"
                             />
                             <Form.Check
                                 inline
@@ -193,6 +194,7 @@ class Register extends Component {
                                 type="radio"
                                 checked={this.state.radioPet === 2 ? true : false}
                                 onChange={this.onRadioHandler(2)}
+                                id="inputDogPerson"
                             />
                             <Form.Check
                                 inline
@@ -200,6 +202,7 @@ class Register extends Component {
                                 type="radio"
                                 checked={this.state.radioPet === 3 ? true : false}
                                 onChange={this.onRadioHandler(3)}
+                                id="inputBothPerson"
                             />
                             <Form.Check
                                 inline
@@ -207,6 +210,7 @@ class Register extends Component {
                                 type="radio"
                                 checked={this.state.radioPet === 4 ? true : false}
                                 onChange={this.onRadioHandler(4)}
+                                id="inputNeitherPerson"
                             />
                         </div>
                     </Form.Row>
@@ -217,14 +221,25 @@ class Register extends Component {
                             name="coffeeCheckbox"
                             checked={this.state.coffeeCheckbox}
                             onChange={this.onCheckboxHandler}
+                            id="inputCoffeeCheckbox"
                         />
                     </Form.Group>
 
                     <>
-                        <Button variant="primary" size="lg" block type="submit">
+                        <Button
+                            variant="primary"
+                            size="lg"
+                            block type="submit"
+                            id="buttonSubmit"
+                        >
                             Submit
                         </Button>
-                        <Button variant="secondary" size="lg" block onClick={this.onResetHandler}>
+                        <Button 
+                            variant="secondary" 
+                            size="lg" 
+                            block onClick={this.onResetHandler}
+                            id="buttonClear"
+                        >
                             Clear Form
                         </Button>
                     </>

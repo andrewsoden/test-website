@@ -9,12 +9,27 @@ class Header extends Component {
     return(
         <MemoryRouter>
             <Navbar bg="dark" variant="dark" expand="lg">
-                <Navbar.Brand exact href="#/">AS</Navbar.Brand>
+                <Navbar.Brand 
+                    href="#/"
+                    id="linkHome"
+                >
+                    AS
+                </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
-                    <Nav.Link href="#/register">Register</Nav.Link>
-                    <Nav.Link href="#/palindrome">Palindrome</Nav.Link>
+                    <Nav.Link 
+                        href="#/register"
+                        id="linkRegister"
+                    >
+                        Register
+                    </Nav.Link>
+                    <Nav.Link 
+                        href="#/palindrome"
+                        id="linkPalindrome"
+                    >
+                        Palindrome
+                    </Nav.Link>
                     </Nav>
                     
                 </Navbar.Collapse>
