@@ -18,7 +18,7 @@ class App extends Component {
         <HashRouter>
           <Header />
 
-          <Route exact path="/" component={Home} />
+          <Route exact={true} path="/" component={Home} />
           <Route path="/register" component={Register} />
           <Route path="/palindrome" component={Palindrome} />
         </HashRouter>

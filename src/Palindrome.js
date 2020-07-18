@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Jumbotron from 'react-bootstrap/Jumbotron'
 import { Button } from 'react-bootstrap';
+import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -30,13 +30,11 @@ class Palindrome extends Component {
         var originalWord = enteredWord;
         var reverseWord = enteredWord.split("").reverse().join("");
 
-        if (reverseWord === originalWord)
-        {
+        if (reverseWord === originalWord) {
             this.setState({ isPalindrome: true });
             this.setState({ displayResult: true });
         }
-        else 
-        {
+        else {
             this.setState({ isPalindrome: false });
             this.setState({ displayResult: true });
         }
@@ -51,8 +49,10 @@ class Palindrome extends Component {
     render() {
 
         return (
-            <Jumbotron>
-                <h1>Palindrome Checker</h1>
+            <Container className="center-col">
+                <br />
+                <h2>Palindrome Checker</h2>
+                <br />
                 <p>
                     A palindrome is the same word forward and backwards
                     <br />Enter a single word below and let us check to see if it is a palindrome
@@ -68,14 +68,18 @@ class Palindrome extends Component {
                             pattern="[a-zA-Z]+"
                         />
                         <br />
-                        <Button variant="primary" type="submit">
+                        <Button
+                            variant="primary"
+                            type="submit"
+                            id="buttonSubmit"
+                        >
                             Submit
                         </Button>
                         <br />
                         <br />
 
                         {this.state.isPalindrome === true && this.state.displayResult === true &&
-                            < Row className="resultIsPalindrome">
+                            <Row className="resultIsPalindrome">
                                 <Col>Nice work - that is a palindrome</Col>
                             </Row>
                         }
@@ -88,7 +92,7 @@ class Palindrome extends Component {
 
                     </Form.Group>
                 </Form>
-            </Jumbotron >
+            </Container>
         );
     }
 }
